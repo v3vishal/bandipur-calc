@@ -5,7 +5,7 @@ var trophicLvls = 4;
         var lastTLval = data[0].value
         var lastmin1Val = lastTLval/0.1
         var lastmin2Val = lastmin1Val/0.1
-        var lastmin3Val = lastmin2Val/0.1
+        var lastmin3Val = lastmin2Val*50000
         var data2 = [
             { type: 'Trees', value: 1350000 },
         ];
@@ -13,6 +13,7 @@ var trophicLvls = 4;
         var firstpl1Val = firstTLval*0.1
         var firstpl2Val = firstpl1Val*0.1
         var firstpl3Val = firstpl2Val*0.1
+        firstpl3Val = firstpl2Val/5000
         data2.push(
             {type:'Herbivores', value: firstpl1Val},
             {type:'Carnivores', value: firstpl2Val},
@@ -133,14 +134,14 @@ var trophicLvls = 4;
             newTigerValue = Math.round(newTigerValue);
             if (!isNaN(newTigerValue) && newTigerValue > 0) {
                 console.log(newTigerValue);
-                data2 = [ 
+                data = [ 
                 {type: "Tigers", value: newTigerValue}
                 ];
                 amount = newTigerValue;
                 var lastTLval = data[0].value
                 var lastmin1Val = lastTLval/0.1
                 var lastmin2Val = lastmin1Val/0.1
-                var lastmin3Val = lastmin2Val/0.1
+                var lastmin3Val = lastmin2Val*50000
                 data.push(
                     {type: 'Carnivores', value: lastmin1Val},
                     {type: 'Herbivores', value: lastmin2Val},
@@ -156,18 +157,19 @@ var trophicLvls = 4;
             newTigerValue = Math.round(newTreeValue);
             if (!isNaN(newTreeValue) && newTreeValue > 0) {
                 console.log(newTreeValue);
-                data = [ 
+                data2 = [ 
                 {type: "Trees/Plants", value: newTreeValue}
                 ];
                 amount = newTreeValue;
-                var lastTLval = data[0].value
-                var lastmin1Val = lastTLval/0.1
-                var lastmin2Val = lastmin1Val/0.1
-                var lastmin3Val = lastmin2Val/0.1
-                data.push(
-                    {type: 'Carnivores', value: lastmin1Val},
-                    {type: 'Herbivores', value: lastmin2Val},
-                    {type: 'Trees/Plants', value: lastmin3Val},);
+                var firstTLval = data2[0].value
+                var firstpl1Val = firstTLval*0.1
+                var firstpl2Val = firstpl1Val*0.1
+                var firstpl3Val = firstpl2Val*0.1
+                firstpl3Val = firstpl2Val/5000
+                data2.push(
+                    {type: 'Herbivores', value: firstpl1Val},
+                    {type: 'Carnivores', value: firstpl2Val},
+                    {type: 'Tigers', value: firstpl3Val},);
                 chart2.destroy();
                 initializeChart2();
             } else {
