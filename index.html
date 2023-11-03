@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trophic Level Energy Consumption Calculator</title>
+        <body>
+            <font face="Consolas"; size="5"; color="black">
+                <center>Energy Consumption in Trophic Levels</center>
+                </font>
+            <div id="chart-container">
+            <canvas id="energy-chart"></canvas>
+        </div>
+        <br>
+        <input type="number" id="inputValue" placeholder="Enter a new value">
+<button onclick="updateGraph()">Update Graph</button>
+
+        </body>
+        <style>
+            #chart-container {
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="test.js"></script>
+    </head>
+</html>
