@@ -8,9 +8,9 @@ var trophicLvls = 4;
         var lastmin3Val = lastmin2Val/0.1
         lastmin3Val *= 5
         data.push(
-            {type: 'Carnivores', value: lastmin1Val},
-            {type: 'Herbivores', value: lastmin2Val},
-            {type: 'Trees/Plants', value: lastmin3Val},);
+            {type: 'Carnivores', value: Math.round(lastmin1Val/1.25)},
+            {type: 'Herbivores', value: Math.round(lastmin2Val/1.2)},
+            {type: 'Trees/Plants', value: Math.round(lastmin3Val)},);
         var amount = 150;
         var chart;
         initializeChart()
@@ -82,9 +82,9 @@ var trophicLvls = 4;
                 lastmin3Val *= 5
                 Math.round(lastmin3Val);
                 data.push(
-                    {type: 'Carnivores', value: lastmin1Val},
-                    {type: 'Herbivores', value: lastmin2Val},
-                    {type: 'Trees/Plants', value: lastmin3Val},);
+                    {type: 'Carnivores', value: Math.round(lastmin1Val/1.25)},
+                    {type: 'Herbivores', value: Math.round(lastmin2Val/1.2)},
+                    {type: 'Trees/Plants', value: Math.round(lastmin3Val)},);
                 chart.destroy();
                 initializeChart();
             } else {
@@ -106,9 +106,9 @@ var trophicLvls = 4;
                 firstpl3Val = Math.round(firstpl3Val/5)
                 amount = firstpl3Val;
                 data.push(
-                    {type: 'Herbivores', value: firstpl1Val},
-                    {type: 'Carnivores', value: firstpl2Val},
-                    {type: 'Tigers', value: firstpl3Val},);
+                    {type: 'Herbivores', value: Math.round(firstpl1Val/1.2)},
+                    {type: 'Carnivores', value: Math.round(firstpl2Val/1.25)},
+                    {type: 'Tigers', value: Math.round(firstpl3Val)},);
                 chart.destroy();
                 initializeChart();
             } else {
@@ -126,9 +126,9 @@ var trophicLvls = 4;
                 var lastmin3Val = lastmin2Val/0.1
                 lastmin3Val *= 5
                 data.push(
-                    {type: 'Carnivores', value: lastmin1Val},
-                    {type: 'Herbivores', value: lastmin2Val},
-                    {type: 'Trees/Plants', value: lastmin3Val},);
+                    {type: 'Carnivores', value: Math.round(lastmin1Val/1.25)},
+            {type: 'Herbivores', value: Math.round(lastmin2Val/1.2)},
+            {type: 'Trees/Plants', value: Math.round(lastmin3Val)},);
                 chart.destroy();
                 initializeChart();
         }
@@ -144,9 +144,9 @@ var trophicLvls = 4;
                 firstpl3Val = firstpl3Val/5
                 amount = firstpl3Val;
                 data.push(
-                    {type: 'Herbivores', value: firstpl1Val},
-                    {type: 'Carnivores', value: firstpl2Val},
-                    {type: 'Tigers', value: firstpl3Val},);
+                    {type: 'Herbivores', value: Math.round(firstpl1Val/1.2)},
+                    {type: 'Carnivores', value: Math.round(firstpl2Val/1.25)},
+                    {type: 'Tigers', value: Math.round(firstpl3Val)},);
                 chart.destroy();
                 initializeChart();
         }
